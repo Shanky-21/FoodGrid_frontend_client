@@ -54,8 +54,12 @@ function Alert(props) {
 export default function ItemCard(props) {
   const classes = useStyles();
   const { title, imageUrl, description, price, _id } = props;
+  console.log("imageUrl",imageUrl);
   const imageUrlSplit = imageUrl.split("\\");
-  const finalImageUrl = `${process.env.REACT_APP_SERVER_URL}/${imageUrlSplit[0]}/${imageUrlSplit[1]}`; //3002 - server port
+ // const finalImageUrl = `${process.env.REACT_APP_SERVER_URL}/${imageUrlSplit[0]}/${imageUrlSplit[1]}`; //3002 - server port
+  const finalImageUrl = `${process.env.REACT_APP_SERVER_URL}/${imageUrlSplit[0]}`;
+
+  console.log("finalImageUrl", finalImageUrl);
 
   const dispatch = useDispatch();
 
@@ -74,7 +78,10 @@ export default function ItemCard(props) {
     price: "",
   });
 
+  console.log("before handle file select");
+
   const handleFileSelect = (event) => {
+    console.log("Inside handle file select",event.target.files[0]);
     setImage(event.target.files[0]);
   };
 
@@ -89,7 +96,10 @@ export default function ItemCard(props) {
   const handleSubmit = () => {
     const itemData = new FormData();
     if (image !== null) itemData.append("image", image);
-    else itemData.append("image", imageUrl);
+    else {
+      itemData.append("image", imageUrl);
+    console.log("Inside handle submit else part");
+  }
     itemData.append("title", inputs.title);
     itemData.append("description", inputs.description);
     itemData.append("price", inputs.price);
