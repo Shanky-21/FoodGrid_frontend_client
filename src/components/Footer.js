@@ -6,12 +6,12 @@ import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import TextField from "@material-ui/core/TextField";
+//import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    backgroundColor: "#e8ede1",
+    backgroundColor: "#cfb6be",
     marginTop: 40,
     height: "42vh",
     textAlign: "center",
@@ -78,7 +78,7 @@ export default function Footer() {
         ) : (
           <>
             <Typography variant="h4" component="p">
-              Recommender System
+            FoodGrid
             </Typography>
             <Typography variant="body1" component="p">
               Get more out of your business, without losing focus on what is
@@ -92,14 +92,14 @@ export default function Footer() {
         )}
       </Grid>
       <Grid item xs={12} sm={3} className={classes.innerCont}>
-        <Typography variant="h5" component="p">
-          Food Recommendation NewsLetter
-        </Typography>
-        <Typography variant="body1" component="p" style={{ marginBottom: 28 }}>
-          Stay updated with new offers from Food Recommendations System
-        </Typography>
-        <TextField label="Your Email address" variant="outlined" />
-        <Button className={classes.buttonStyleTwo}>SEND</Button>
+        {/* <Typography variant="h5" component="p">
+        FoodGrid NewsLetter
+        </Typography> */}
+        {/* <Typography variant="body1" component="p" style={{ marginBottom: 28 }}>
+          Stay updated with new offers from FoodGrid
+        </Typography> */}
+        {/* <TextField label="Your Email address" variant="outlined" />
+        <Button className={classes.buttonStyleTwo}>SEND</Button> */}
       </Grid>
       <Grid item xs={12} sm={3} className={classes.resources}>
         <Typography variant="h5" component="p">

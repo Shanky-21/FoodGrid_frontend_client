@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
   },
   delivery: {
-    color: "#157a21",
+    color: "#156d7a",
     fontSize: 64,
     fontWeight: "bold",
     marginTop: -30,
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
   },
   ctaOrder: {
     fontSize: 18,
-    backgroundColor: "#f7a692",
+    backgroundColor: "#e8ede1", 
     marginTop: 30,
   },
 }));
@@ -65,11 +65,6 @@ const HomeStart = () => {
         </Typography>
         <Typography className={classes.delivery} noWrap>
           DELIVERY
-        </Typography>
-        <Typography variant="body2" className={classes.paragraph}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet.
         </Typography>
         <Button variant="outlined" className={classes.ctaOrder}>
           ORDER NOW

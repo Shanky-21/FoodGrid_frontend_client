@@ -14,7 +14,7 @@ import { logoutAction } from "../redux/actions/authActions";
 
 const useStyles = makeStyles(() => ({
   appBar: {
-    backgroundColor: "#e8ede1",
+    backgroundColor: "#cfb6be",
     marginBottom: 10,
   },
   title: { flex: 1, marginLeft: 60, color: "black" },
@@ -54,7 +54,7 @@ export default function AppBarPrimary() {
       <Toolbar>
         <Link to="/" className={classes.title}>
           <Typography variant="h6" noWrap>
-            <span className={classes.name}>Food Recommender System</span>
+            <span className={classes.name}>FoodGrid</span>
           </Typography>
         </Link>
         {authenticated ? (
